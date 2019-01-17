@@ -32,7 +32,6 @@ export default {
   display: flex;
   align-items: center;
   background-color: white;
-  width: 100%;
   padding: 20px;
 }
 .title {
@@ -40,7 +39,6 @@ export default {
 
   &:after {
     content: ".";
-    font-size: 1.5em;
     color: #01d62f;
   }
 }
@@ -61,6 +59,23 @@ export default {
     &:hover {
       color: #01ac26;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 20px 0 20px 0;
+  }
+  .nav-menu {
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .nav-bar {
+    padding: 20px 0 20px 0;
+  }
+  .nav-menu {
+    display: none;
   }
 }
 </style>
