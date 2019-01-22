@@ -4,6 +4,7 @@
     <div class="project-grid">
         <ProjectCard v-for="(project, index) in projects" :key="index" :details="project"/>
     </div>
+    <p class="external-link">View all my projects on <a href="https://github.com/haxzie">GitHub</a></p>
   </div>
 </template>
 
@@ -67,7 +68,7 @@ export default {
 
   h2 {
     font-size: 2em;
-    padding: 20px;
+    padding: 20px 0px 20px 0px;
 
     &:after {
       content: ".";
@@ -81,6 +82,16 @@ export default {
       grid-row-gap: 10px;
       grid-column-gap: 10px;
       margin-top: 10px;
+  }
+
+  .external-link {
+      padding: 20px 0px 20px 0px;
+      font-weight: bold;
+
+      a {
+          text-decoration: none;
+          color: #01d62f;
+      }
   }
 }
 </style>

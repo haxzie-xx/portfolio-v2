@@ -7,6 +7,7 @@
     <ul>
         <li v-for="(tag, index) in details.tags" :key="index"> {{tag}}</li>
     </ul>
+    <p class="bg-text">{{details.name[0]}}</p>
   </div>
 </template>
 
@@ -20,16 +21,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .project-card {
   width: auto;
   height: 200px;
   background-color: #ffffff;
   border: 1px solid #c9c9c9;
   border-top: 3px solid #0491e2;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  .bg-text {
+    position: absolute;
+    font-size: 10em;
+    clear: both;
+    margin-top: 40px;
+    margin-left: -20px;
+    opacity: 0.1;
+  }
 
   a {
     text-decoration: none;
@@ -40,13 +52,16 @@ export default {
     }
   }
   h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    font-weight: bold;
     &:after {
       content: ".";
       color: #01d62f;
     }
   }
   p {
+    font-size: 0.9em;
+    flex-grow: 1;
     margin: 20px 0px 10px 0px;
   }
 
